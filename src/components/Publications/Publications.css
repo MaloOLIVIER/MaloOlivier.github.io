@@ -10,7 +10,32 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.5;
+.paper-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.paper {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.paper h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.paper p {
+    margin-bottom: 5px;
+}
+
+.paper .tags {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
 }
