@@ -1,0 +1,16 @@
+/* Homepage.css */
+
+.homepage {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
