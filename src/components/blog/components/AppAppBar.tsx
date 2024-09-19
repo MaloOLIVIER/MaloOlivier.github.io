@@ -67,27 +67,27 @@ export default function AppAppBar({
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Link to="/">
-                <Button variant="text" color="info" size="small">
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
                   Home
                 </Button>
               </Link>
               <Link to="/Resume">
-                <Button variant="text" color="info" size="small">
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
                   Resume
                 </Button>
               </Link>
               <Link to="/Publications">
-                <Button variant="text" color="info" size="small">
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
                   Publications
                 </Button>
               </Link>
               <Link to="/projects">
-                <Button variant="text" color="info" size="small">
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
                   Projects
                 </Button>
               </Link>
               <Link to="/Contact">
-                <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif', minWidth: 0 }}>
                   Contact
                 </Button>
               </Link>

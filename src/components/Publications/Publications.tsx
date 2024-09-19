@@ -1,5 +1,4 @@
 import React from 'react';
-import './Publications.css';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
@@ -7,30 +6,9 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-
-interface Paper {
-    title: string;
-    abstract: string;
-    author: string;
-    publicationDate: string;
-    tags: string[];
-}
-
-function PaperList({ papers }: { papers: Paper[] }) {
-    return (
-        <div className="paper-list">
-            {papers.map((paper, index) => (
-                <div className="paper" key={index}>
-                    <h2>{paper.title}</h2>
-                    <p>{paper.abstract}</p>
-                    <p>Author: {paper.author}</p>
-                    <p>Publication Date: {paper.publicationDate}</p>
-                    <p>Tags: {paper.tags.join(', ')}</p>
-                </div>
-            ))}
-        </div>
-    );
-};
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid2';
+import Container from '@mui/material/Container';
 
 export const SyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',
@@ -68,7 +46,7 @@ export const StyledTypography = styled(Typography)({
     textOverflow: 'ellipsis',
 });
 
-export function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
+export function Author({ authors, date }: { authors: { name: string; avatar: string }[]; date: string }) {
     return (
         <Box
             sx={{
@@ -93,97 +71,168 @@ export function Author({ authors }: { authors: { name: string; avatar: string }[
                         />
                     ))}
                 </AvatarGroup>
-                <Typography variant="caption">
+                <Typography variant="caption" fontFamily={'Roboto'}>
                     {authors.map((author) => author.name).join(', ')}
                 </Typography>
             </Box>
-            <Typography variant="caption">July 14, 2021</Typography>
+            <Typography variant="caption" fontFamily={'Roboto'}>{date}</Typography>
         </Box>
     );
 };
 
 export const cardData = [
     {
-        img: 'https://picsum.photos/800/450?random=1',
-        tag: 'Engineering',
-        title: 'Revolutionizing software development with cutting-edge tools',
+        img: '/static/images/content/vibravox_sensors.png',
+        tag: 'Body-Conduction audio sensors ; Robust Communication ; Speech enhancement ; Speech recognition ; Speaker verification.',
+        title: 'Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors',
         description:
-            'Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.',
+            `Vibravox is a dataset compliant with the General Data Protection Regulation (GDPR) containing audio recordings using five different body-conduction audio sensors : two in-ear microphones, two bone conduction vibration pickups and a laryngophone.
+            The data set also includes audio data from an airborne microphone used as a reference.
+            The Vibravox corpus contains 38 hours of speech samples and physiological sounds recorded by 188 participants under different acoustic conditions imposed by an high order ambisonics 3D spatializer.
+            Annotations about the recording conditions and linguistic transcriptions are also included in the corpus.
+            We conducted a series of experiments on various speech-related tasks, including speech recognition, speech enhancement and speaker verification.
+            These experiments were carried out using state-of-the-art models to evaluate and compare their performances on signals captured by the different audio sensors offered by the Vibravox dataset, with the aim of gaining a better grasp of their individual characteristics.`,
         authors: [
-            { name: 'Remy Sharp', avatar: '/static/images/avatar/1.jpg' },
-            { name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' },
+            { name: 'Julien Hauret', avatar: '/static/images/avatar/julien.jpg' },
+            { name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' },
         ],
+        date: "July 17, 2024",
     },
     {
-        img: 'https://picsum.photos/800/450?random=2',
-        tag: 'Product',
-        title: 'Innovative product features that drive success',
+        img: '/static/images/content/insa.png',
+        tag: 'Body conduction microphones ; Automatic Speech Recognition ; Deep Neural Networks ; Transformer layers ; Experimental sciences.',
+        title: 'Graduation project to design an intelligent speech transcription system for unconventional data [R&D]',
         description:
-            'Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.',
-        authors: [{ name: 'Erica Johns', avatar: '/static/images/avatar/6.jpg' }],
-    },
-    {
-        img: 'https://picsum.photos/800/450?random=3',
-        tag: 'Design',
-        title: 'Designing for the future: trends and insights',
-        description:
-            'Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.',
-        authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
-    },
-    {
-        img: 'https://picsum.photos/800/450?random=4',
-        tag: 'Company',
-        title: "Our company's journey: milestones and achievements",
-        description:
-            "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-        authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
-    },
-    {
-        img: 'https://picsum.photos/800/450?random=45',
-        tag: 'Engineering',
-        title: 'Pioneering sustainable engineering solutions',
-        description:
-            "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
-        authors: [
-            { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-            { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
-        ],
-    },
-    {
-        img: 'https://picsum.photos/800/450?random=6',
-        tag: 'Product',
-        title: 'Maximizing efficiency with our latest product updates',
-        description:
-            'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
-        authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
+            `In order to support the thesis work of Mr. Julien HAURET, the aim of this final project is to contribute to the development of the VibraVox dataset and the design of an Automatic Speech Recognition (ASR) system using unconventional data.
+            A methodology based on the use of Deep Neural Networks and Transformer layers has been implemented. The finetuning of pretrained models is carefully adjusted using implementation strategies and the hyperparameters described by Baevski et al. are adopted.
+            The experiments aim to analyze the performance differences between different microphones and quantify the impact of a speech enhancement system in pre-processing.
+            A total of 200 participants (50 hours) will follow an experimental protocol to record audio data using different body-conducted microphones.
+            A scientific article summarizes these findings and conclusions.`,
+        authors: [{ name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' }],
+        date: "January 31, 2024",
     },
 ];
 
 const Publications: React.FC = () => {
+    const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
+        null,
+    );
+
+    const handleFocus = (index: number) => {
+        setFocusedCardIndex(index);
+    };
+
+    const handleBlur = () => {
+        setFocusedCardIndex(null);
+    };
+
+    const handleClick = (pdfUrl: string) => {
+        window.location.href = pdfUrl;
+    };
+
     return (
-        <div className="publications">
-            <h1>Publications</h1>
-            <p>I am currently working on my research and will be adding my publications here soon.</p>
+        <Container
+            maxWidth="lg"
+            component="main"
+            sx={{ display: 'flex', flexDirection: 'column', my: 20, gap: 4 }}
+        >
+            <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>Publications</Typography>
 
-            <PaperList
-                papers={[
-                    {
-                        title: 'Paper 1',
-                        abstract: 'Abstract for paper 1',
-                        author: 'John Doe',
-                        publicationDate: '2021-01-01',
-                        tags: ['tag1', 'tag2'],
-                    },
-                    {
-                        title: 'My other paper',
-                        abstract: 'Abstract for paper 2',
-                        author: 'Jane Doe',
-                        publicationDate: '2021-02-01',
-                        tags: ['tag2', 'tag3'],
-                    },
-                ]} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <Grid container spacing={8} columns={12} justifyContent="center" alignItems="center" style={{ height: '100vh' }}>
+                    <Grid size={{ xs: 6, md: 8 }}>
+                        <SyledCard
+                            variant="outlined"
+                            onClick={() => handleClick("https://arxiv.org/pdf/2407.11828")}
+                            onFocus={() => handleFocus(0)}
+                            onBlur={handleBlur}
+                            tabIndex={0}
+                            className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                        >
+                            <CardMedia
+                                component="img"
+                                alt="vibravox"
+                                image={cardData[0].img}
+                                aspect-ratio="16 / 9"
+                                sx={{
+                                    borderBottom: '1px solid',
+                                    borderColor: 'divider',
+                                }}
+                            />
 
-        </div>);
+                            <SyledCardContent>
+                                <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
+                                    {cardData[0].tag}
+                                </Typography>
+                                <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
+                                    {cardData[0].title}
+                                </Typography>
+                                <StyledTypography
+                                    variant="body2"
+                                    color="text.secondary"
+                                    gutterBottom
+                                    sx={{
+                                        minHeight: '150px', // Adjust this value as needed
+                                        overflow: 'auto', // Add scroll if content overflows
+                                        textAlign: 'justify', // Justify the text
+                                    }}
+                                    fontFamily={'Roboto'}
+                                >
+                                    {cardData[0].description}
+                                </StyledTypography>
+                            </SyledCardContent>
+                            <Author authors={cardData[0].authors} date={cardData[0].date} />
+                        </SyledCard>
+                    </Grid>
+                    <Grid size={{ xs: 6, md: 8 }}>
+                        <SyledCard
+                            variant="outlined"
+                            onClick={() => handleClick("/static/images/papers/MaloOLIVIER_MasterThesis.pdf")}
+                            onFocus={() => handleFocus(0)}
+                            onBlur={handleBlur}
+                            tabIndex={0}
+                            className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                        >
+                            <CardMedia
+                                component="img"
+                                alt="insa"
+                                image={cardData[1].img}
+                                aspect-ratio="16 / 9"
+                                sx={{
+                                    borderBottom: '1px solid',
+                                    borderColor: 'divider',
+                                }}
+                            />
+
+                            <SyledCardContent>
+                                <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
+                                    {cardData[1].tag}
+                                </Typography>
+                                <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
+                                    {cardData[1].title}
+                                </Typography>
+                                <StyledTypography
+                                    variant="body2"
+                                    color="text.secondary"
+                                    gutterBottom
+                                    sx={{
+                                        minHeight: '150px', // Adjust this value as needed
+                                        overflow: 'auto', // Add scroll if content overflows
+                                        textAlign: 'justify', // Justify the text
+                                    }}
+                                    fontFamily={'Roboto'}
+                                >
+                                    {cardData[1].description}
+                                </StyledTypography>
+                            </SyledCardContent>
+                            <Author authors={cardData[1].authors} date={cardData[1].date} />
+                        </SyledCard>
+                    </Grid>
+                </Grid>
+            </Box>
+
+        </Container>
+    );
 };
 
 export default Publications;
