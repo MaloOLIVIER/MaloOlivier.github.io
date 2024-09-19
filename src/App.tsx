@@ -1,6 +1,5 @@
 import React from 'react';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider, PaletteMode } from '@mui/material/styles';
 import Homepage from './components/Homepage/Homepage';
@@ -9,7 +8,10 @@ import Publications from './components/Publications/Publications';
 import Contact from './components/Contact/Contact';
 import getBlogTheme from './components/blog/theme/getBlogTheme';
 import AppAppBar from './components/blog/components/AppAppBar';
-import TemplateFrame from './components/blog/TemplateFrame';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   const [mode, setMode] = React.useState<PaletteMode>('light');
