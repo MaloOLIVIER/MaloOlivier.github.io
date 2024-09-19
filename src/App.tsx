@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Outlet, HashRouter, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider, PaletteMode } from '@mui/material/styles';
 import Homepage from './components/Homepage/Homepage';
@@ -12,6 +12,12 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+/* emailjs parameters */
+export const MALO_MAIL = "MaloOlivier333@gmail.com"
+export const PUBLIC_KEY = "MdTfxlz4OeqU4iNRa"
+export const SERVICE_ID = 'service_qky46tp'
+export const TEMPLATE_ID = 'template_5bjrtst'
 
 
 //TODO: fix the routes on smartphone
@@ -44,7 +50,7 @@ function App() {
   return (
     <ThemeProvider theme={blogTheme}>
       <CssBaseline enableColorScheme />
-      <BrowserRouter>
+      <HashRouter>
 
         <AppAppBar
           mode={mode}
@@ -57,7 +63,7 @@ function App() {
           <Route path="/Projects" element={<Outlet />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
     </ThemeProvider>
 
