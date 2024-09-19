@@ -17,6 +17,7 @@
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
+    "emailjs-com": "^3.2.0",
     "markdown-to-jsx": "^7.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
