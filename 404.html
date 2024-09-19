@@ -7,9 +7,9 @@
         // This script ensures that the correct URL is preserved after the redirect
         (function () {
             var redirect = document.createElement("a");
-            redirect.href = window.location.href;
-            redirect.search = "";
-            redirect.hash = window.location.pathname;
+            redirect.href = window.location.origin + window.location.pathname;
+            redirect.search = window.location.search;
+            redirect.hash = window.location.hash;
             window.location.replace(redirect.href);
         })();
     </script>
