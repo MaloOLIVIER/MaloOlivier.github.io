@@ -31,7 +31,7 @@ const Homepage: React.FC = () => {
         >
 
             <Grid container spacing={2} columns={12}>
-                <Grid size={{ xs: 12, md: 6 }} sx={{ mb: 12 }}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>
                         Welcome to my publication research blog
                     </Typography>
@@ -43,7 +43,7 @@ const Homepage: React.FC = () => {
                     </Typography>
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 12 }}>
                     <CardMedia
                         component="img"
                         alt="Malo"
