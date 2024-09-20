@@ -229,7 +229,7 @@ const Resume: React.FC = () => {
             <Divider />
             <Grid container spacing={2} columns={12}>
 
-                <Grid size={{ xs: 12, md: 3 }}>
+                <Grid size={{ xs: 12, md: 4 }}>
 
                     <Timeline>
                         <TimelineItem>
@@ -411,7 +411,7 @@ const Resume: React.FC = () => {
 
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 9 }}>
+                <Grid size={{ xs: 12, md: 8 }}>
 
                     <Typography mt={2} ml={3} mb={3} fontFamily={'Roboto'} variant="h4">Job experiences</Typography>
 
