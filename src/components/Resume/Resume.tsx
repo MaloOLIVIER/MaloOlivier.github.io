@@ -176,7 +176,7 @@ const Resume: React.FC = () => {
                     >
                         <EmailIcon />
                         <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            MaloOlivier333@gmail.com
+                            ***@***
                         </Typography>
                     </Box>
                     <Box
