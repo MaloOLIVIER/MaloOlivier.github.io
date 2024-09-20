@@ -13,6 +13,7 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ToggleColorMode from './ToggleColorMode';
+import Typography from '@mui/material/Typography';
 
 /*export function NavBar() {
   return (
@@ -81,11 +82,6 @@ export default function AppAppBar({
                   Publications
                 </Button>
               </Link>
-              <Link to="/projects">
-                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
-                  Projects
-                </Button>
-              </Link>
               <Link to="/Contact">
                 <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif', minWidth: 0 }}>
                   Contact
@@ -126,11 +122,34 @@ export default function AppAppBar({
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>Home</MenuItem>
-                <MenuItem>Resume</MenuItem>
-                <MenuItem>Publications</MenuItem>
-                <MenuItem>Projects</MenuItem>
-                <MenuItem>Contact</MenuItem>
+                <MenuItem>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                      Home
+                    </Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/Resume" style={{ textDecoration: 'none' }}>
+                    <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                      Resume
+                    </Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/Publications" style={{ textDecoration: 'none' }}>
+                    <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                      Publications
+                    </Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/Contact" style={{ textDecoration: 'none' }}>
+                    <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                      Contact
+                    </Typography>
+                  </Link>
+                </MenuItem>
                 <MenuItem>
                   <ToggleColorMode
                     data-screenshot="toggle-mode"
