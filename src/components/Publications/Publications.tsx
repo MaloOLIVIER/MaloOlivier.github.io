@@ -138,98 +138,97 @@ const Publications: React.FC = () => {
         >
             <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>Publications</Typography>
 
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                <Grid container spacing={8} columns={12} justifyContent="center" alignItems="center">
-                    <Grid size={{ xs: 6, md: 8 }}>
-                        <SyledCard
-                            variant="outlined"
-                            onClick={() => handleClick("https://arxiv.org/pdf/2407.11828")}
-                            onFocus={() => handleFocus(0)}
-                            onBlur={handleBlur}
-                            tabIndex={0}
-                            className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-                        >
-                            <CardMedia
-                                component="img"
-                                alt="vibravox"
-                                image={cardData[0].img}
-                                aspect-ratio="16 / 9"
-                                sx={{
-                                    borderBottom: '1px solid',
-                                    borderColor: 'divider',
-                                }}
-                            />
+            <Grid direction='column' container spacing={8} columns={12} justifyContent="center" alignItems="center">
+                <Grid size={{ xs: 12, md: 8 }}>
+                    <SyledCard
+                        variant="outlined"
+                        onClick={() => handleClick("https://arxiv.org/pdf/2407.11828")}
+                        onFocus={() => handleFocus(0)}
+                        onBlur={handleBlur}
+                        tabIndex={0}
+                        className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                    >
+                        <CardMedia
+                            component="img"
+                            alt="vibravox"
+                            image={cardData[0].img}
+                            aspect-ratio="16 / 9"
+                            sx={{
+                                borderBottom: '1px solid',
+                                borderColor: 'divider',
+                            }}
+                        />
 
-                            <SyledCardContent>
-                                <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
-                                    {cardData[0].tag}
-                                </Typography>
-                                <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
-                                    {cardData[0].title}
-                                </Typography>
-                                <StyledTypography
-                                    variant="body2"
-                                    color="text.secondary"
-                                    gutterBottom
-                                    sx={{
-                                        minHeight: '150px', // Adjust this value as needed
-                                        overflow: 'auto', // Add scroll if content overflows
-                                        textAlign: 'justify', // Justify the text
-                                    }}
-                                    fontFamily={'Roboto'}
-                                >
-                                    {cardData[0].description}
-                                </StyledTypography>
-                            </SyledCardContent>
-                            <Author authors={cardData[0].authors} date={cardData[0].date} />
-                        </SyledCard>
-                    </Grid>
-                    <Grid size={{ xs: 6, md: 8 }}>
-                        <SyledCard
-                            variant="outlined"
-                            onClick={() => handleClick("/static/images/papers/MaloOLIVIER_MasterThesis.pdf")}
-                            onFocus={() => handleFocus(0)}
-                            onBlur={handleBlur}
-                            tabIndex={0}
-                            className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
-                        >
-                            <CardMedia
-                                component="img"
-                                alt="insa"
-                                image={cardData[1].img}
-                                aspect-ratio="16 / 9"
+                        <SyledCardContent>
+                            <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
+                                {cardData[0].tag}
+                            </Typography>
+                            <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
+                                {cardData[0].title}
+                            </Typography>
+                            <StyledTypography
+                                variant="body2"
+                                color="text.secondary"
+                                gutterBottom
                                 sx={{
-                                    borderBottom: '1px solid',
-                                    borderColor: 'divider',
+                                    minHeight: '150px', // Adjust this value as needed
+                                    overflow: 'auto', // Add scroll if content overflows
+                                    textAlign: 'justify', // Justify the text
                                 }}
-                            />
-
-                            <SyledCardContent>
-                                <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
-                                    {cardData[1].tag}
-                                </Typography>
-                                <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
-                                    {cardData[1].title}
-                                </Typography>
-                                <StyledTypography
-                                    variant="body2"
-                                    color="text.secondary"
-                                    gutterBottom
-                                    sx={{
-                                        minHeight: '150px', // Adjust this value as needed
-                                        overflow: 'auto', // Add scroll if content overflows
-                                        textAlign: 'justify', // Justify the text
-                                    }}
-                                    fontFamily={'Roboto'}
-                                >
-                                    {cardData[1].description}
-                                </StyledTypography>
-                            </SyledCardContent>
-                            <Author authors={cardData[1].authors} date={cardData[1].date} />
-                        </SyledCard>
-                    </Grid>
+                                fontFamily={'Roboto'}
+                            >
+                                {cardData[0].description}
+                            </StyledTypography>
+                        </SyledCardContent>
+                        <Author authors={cardData[0].authors} date={cardData[0].date} />
+                    </SyledCard>
                 </Grid>
-            </Box>
+                <Grid size={{ xs: 12, md: 8 }}>
+                    <SyledCard
+                        variant="outlined"
+                        onClick={() => handleClick("/static/images/papers/MaloOLIVIER_MasterThesis.pdf")}
+                        onFocus={() => handleFocus(0)}
+                        onBlur={handleBlur}
+                        tabIndex={0}
+                        className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                    >
+                        <CardMedia
+                            component="img"
+                            alt="insa"
+                            image={cardData[1].img}
+                            aspect-ratio="16 / 9"
+                            sx={{
+                                borderBottom: '1px solid',
+                                borderColor: 'divider',
+                            }}
+                        />
+
+                        <SyledCardContent>
+                            <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
+                                {cardData[1].tag}
+                            </Typography>
+                            <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
+                                {cardData[1].title}
+                            </Typography>
+                            <StyledTypography
+                                variant="body2"
+                                color="text.secondary"
+                                gutterBottom
+                                sx={{
+                                    minHeight: '150px', // Adjust this value as needed
+                                    overflow: 'auto', // Add scroll if content overflows
+                                    textAlign: 'justify', // Justify the text
+                                }}
+                                fontFamily={'Roboto'}
+                            >
+                                {cardData[1].description}
+                            </StyledTypography>
+                        </SyledCardContent>
+                        <Author authors={cardData[1].authors} date={cardData[1].date} />
+                    </SyledCard>
+                </Grid>
+            </Grid>
+
 
         </Container>
     );

@@ -724,31 +724,28 @@ const Resume: React.FC = () => {
             <Divider />
 
             <Typography fontFamily={'Roboto'} variant="h6">Languages</Typography>
-
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Box sx={{ width: '48%' }}>
+            <Grid container spacing={2} columns={12} >
+                <Grid size={{ xs: 6, md: 6 }}>
                     <Typography fontFamily={'Roboto'} variant="body1">French</Typography>
                     <StaticBorderLinearProgress value={100} />
                     <Typography mt={1} fontFamily={'Roboto'} variant="body1">English</Typography>
                     <StaticBorderLinearProgress value={90} />
-                </Box>
-
-                <Box sx={{ width: '48%' }}>
+                </Grid>
+                <Grid size={{ xs: 6, md: 6 }}>
                     <Typography fontFamily={'Roboto'} variant="body1">Spanish</Typography>
                     <StaticBorderLinearProgress value={70} />
                     <Typography mt={1} fontFamily={'Roboto'} variant="body1">Italian</Typography>
                     <StaticBorderLinearProgress value={50} />
                     <Typography mt={1} fontFamily={'Roboto'} variant="body1">Russian</Typography>
                     <StaticBorderLinearProgress value={40} />
-                </Box>
-            </Box>
+                </Grid>
+            </Grid >
 
             <Divider />
 
             <Typography fontFamily={'Roboto'} variant="h6">Programming languages and Skills</Typography>
-
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <Grid container spacing={2} columns={12} >
+                <Grid size={{ xs: 4, md: 4 }}>
 
                     <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Development</Typography>
 
@@ -772,9 +769,8 @@ const Resume: React.FC = () => {
                         <StaticCircularProgress value={70} size={40} />
                         <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>React</Typography>
                     </Box>
-                </Box>
-
-                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                </Grid>
+                <Grid size={{ xs: 4, md: 4 }}>
 
                     <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Data Processing & Deep Learning</Typography>
 
@@ -798,9 +794,8 @@ const Resume: React.FC = () => {
                         <StaticCircularProgress value={80} size={40} />
                         <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hugging Face</Typography>
                     </Box>
-                </Box>
-
-                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                </Grid>
+                <Grid size={{ xs: 4, md: 4 }}>
 
                     <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Frameworks & Execution Environment</Typography>
 
@@ -820,8 +815,9 @@ const Resume: React.FC = () => {
                         <StaticCircularProgress value={75} size={40} />
                         <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Node.js</Typography>
                     </Box>
-                </Box>
-            </Box>
+
+                </Grid>
+            </Grid>
 
         </Container >
     );
