@@ -15,6 +15,31 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Container from '@mui/material/Container';
 import emailjs from 'emailjs-com';
 import { MALO_MAIL, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../App';
+import CircularProgress, {
+    circularProgressClasses,
+    CircularProgressProps,
+} from '@mui/material/CircularProgress';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+
+export function GradientCircularProgress({ activateWhen }) {
+    if (!activateWhen || !activateWhen.includes('.')) return null;
+    return (
+        <React.Fragment>
+            <svg width={0} height={0}>
+                <defs>
+                    <linearGradient id="my_gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#e01cd5" />
+                        <stop offset="100%" stopColor="#4169E1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <CircularProgress size={30} sx={{
+                'svg circle': { stroke: 'url(#my_gradient)' },
+                verticalAlign: 'middle',
+            }} />
+        </React.Fragment>
+    );
+}
 
 const Card = styled(MuiCard)(({ theme }) => ({
     display: 'flex',
@@ -221,6 +246,9 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
                             sx={{ fontFamily: 'Roboto, sans-serif' }}
                         >
                             {!messageStatus ? "Send" : messageStatus}
+                            <Box sx={{ ml: 2 }}>
+                                <GradientCircularProgress activateWhen={messageStatus} />
+                            </Box>
                         </Button>
                     </Box>
                     <Divider>
