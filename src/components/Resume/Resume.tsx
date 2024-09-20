@@ -417,19 +417,21 @@ const Resume: React.FC = () => {
 
                     <Accordion defaultExpanded>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         Research Engineer
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        CNAM - ISL
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1", ml: 1 }}>
+                                            CNAM - ISL
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -448,19 +450,21 @@ const Resume: React.FC = () => {
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         Research assistant in EBEN project | VibraVox dataset
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        CNAM Paris
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                                            CNAM Paris
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -525,19 +529,21 @@ const Resume: React.FC = () => {
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         Technical Consultant Java
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        BNP Paribas Paris
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                                            BNP Paribas Paris
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -592,19 +598,21 @@ const Resume: React.FC = () => {
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 4, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         DevOps Engineer & FullStack Developer techstud.io associate
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        onepoint Montréal, Canada
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                                            onepoint Montréal, Canada
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -632,19 +640,21 @@ const Resume: React.FC = () => {
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 4, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         FullStack Developer
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        onepoint Montréal, Canada
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                                            onepoint Montréal, Canada
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -672,19 +682,21 @@ const Resume: React.FC = () => {
 
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                                <Box display="flex" alignItems="center">
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 4, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
                                         Business Analyst
                                     </Typography>
-                                </Box>
-                                <Box display="flex" alignItems="center">
-                                    <PlaceIcon sx={{ color: "#4169E1" }} />
-                                    <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                                        Banque de France, Courbevoie
-                                    </Typography>
-                                </Box>
-                            </Box>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                                            Banque de France, Courbevoie
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -719,7 +731,7 @@ const Resume: React.FC = () => {
                         </AccordionDetails>
                     </Accordion>
                 </Grid>
-            </Grid>
+            </Grid >
 
             <Divider />
 
