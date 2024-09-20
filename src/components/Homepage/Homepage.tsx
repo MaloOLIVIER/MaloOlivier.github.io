@@ -36,10 +36,7 @@ const Homepage: React.FC = () => {
                         Welcome to my publication research blog
                     </Typography>
                     <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                        This is where you can find my latest research and publications.
-                    </Typography>
-                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
-                        Please feel free to explore and download my work.
+                        Step into the world of my research. Explore, learn, and engage.
                     </Typography>
                 </Grid>
 
