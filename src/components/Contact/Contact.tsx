@@ -169,7 +169,7 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
                                 id="name"
                                 type="name"
                                 name="name"
-                                placeholder="your name"
+                                placeholder="Your name"
                                 autoComplete="name"
                                 autoFocus
                                 required

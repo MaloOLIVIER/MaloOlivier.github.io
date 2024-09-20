@@ -139,7 +139,7 @@ const Publications: React.FC = () => {
             <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>Publications</Typography>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                <Grid container spacing={8} columns={12} justifyContent="center" alignItems="center" style={{ height: '100vh' }}>
+                <Grid container spacing={8} columns={12} justifyContent="center" alignItems="center">
                     <Grid size={{ xs: 6, md: 8 }}>
                         <SyledCard
                             variant="outlined"
