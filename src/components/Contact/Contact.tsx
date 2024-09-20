@@ -15,13 +15,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Container from '@mui/material/Container';
 import emailjs from 'emailjs-com';
 import { MALO_MAIL, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../App';
-import CircularProgress, {
-    circularProgressClasses,
-    CircularProgressProps,
-} from '@mui/material/CircularProgress';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
-export function GradientCircularProgress({ activateWhen }) {
+export function GradientCircularProgress({ activateWhen, size }) {
     if (!activateWhen || !activateWhen.includes('.')) return null;
     return (
         <React.Fragment>
@@ -33,7 +29,7 @@ export function GradientCircularProgress({ activateWhen }) {
                     </linearGradient>
                 </defs>
             </svg>
-            <CircularProgress size={30} sx={{
+            <CircularProgress size={size} sx={{
                 'svg circle': { stroke: 'url(#my_gradient)' },
                 verticalAlign: 'middle',
             }} />
@@ -247,7 +243,7 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
                         >
                             {!messageStatus ? "Send" : messageStatus}
                             <Box sx={{ ml: 2 }}>
-                                <GradientCircularProgress activateWhen={messageStatus} />
+                                <GradientCircularProgress activateWhen={messageStatus} size={30} />
                             </Box>
                         </Button>
                     </Box>

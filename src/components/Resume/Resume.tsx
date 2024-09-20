@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Divider, List, ListItem, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Divider, List, ListItem, styled, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
@@ -12,8 +12,91 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PlaceIcon from '@mui/icons-material/Place';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot, TimelineOppositeContent } from '@mui/lab';
+import SchoolIcon from '@mui/icons-material/School';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import WorkIcon from '@mui/icons-material/Work';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import CircularProgress, { CircularProgressProps, circularProgressClasses, } from '@mui/material/CircularProgress';
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent } from '@mui/lab';
 
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+    height: 10,
+    borderRadius: 5,
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+        backgroundColor: theme.palette.grey[200],
+        ...theme.applyStyles('dark', {
+            backgroundColor: theme.palette.grey[800],
+        }),
+    },
+    [`& .${linearProgressClasses.bar}`]: {
+        borderRadius: 5,
+        backgroundColor: '#4169E1',
+        ...theme.applyStyles('dark', {
+            backgroundColor: '#308fe8',
+        }),
+    },
+}));
+
+const StaticBorderLinearProgress: React.FC<{ value: number }> = ({ value }) => {
+    return (
+        <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ width: '100%', mr: 1 }}>
+                <BorderLinearProgress variant="determinate" value={value} />
+            </Box>
+            {/*<Box sx={{ minWidth: 35 }}>
+                <Typography variant="body2" color="textSecondary">{`${Math.round(value)}%`}</Typography>
+            </Box>*/}
+        </Box>
+    );
+};
+
+const StaticCircularProgress: React.FC<{ props?: CircularProgressProps, value: number, size: number }> = ({ props, value, size }) => {
+    return (
+        <Box sx={{ position: 'relative' }}>
+            <CircularProgress
+                variant="determinate"
+                sx={(theme) => ({
+                    color: theme.palette.grey[200],
+                    ...theme.applyStyles('dark', {
+                        color: theme.palette.grey[800],
+                    }),
+                })}
+                size={size}
+                thickness={4}
+                {...props}
+                value={100}
+            />
+            <CircularProgress
+                variant="determinate"
+                disableShrink
+                /*sx={(theme) => ({
+                    color: '#4169E1',
+                    animationDuration: '550ms',
+                    position: 'absolute',
+                    left: 0,
+                    [`& .${circularProgressClasses.circle}`]: {
+                        strokeLinecap: 'round',
+                    },
+                    ...theme.applyStyles('dark', {
+                        color: '#308fe8',
+                    }),
+                })}*/
+                sx={(theme) => ({
+                    position: 'absolute',
+                    left: 0,
+                    color: '#4169E1',
+                    [`& .${circularProgressClasses.circle}`]: {
+                        strokeLinecap: 'round',
+                    },
+                })}
+                value={value}
+                size={size}
+                thickness={4}
+                {...props}
+            />
+        </Box>
+    );
+}
 
 const Resume: React.FC = () => {
     const handleClick = (pdfUrl: string) => {
@@ -156,7 +239,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <BiotechIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -172,7 +255,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -188,7 +271,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -204,7 +287,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <WorkIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -220,7 +303,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <WorkIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -236,7 +319,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <WorkIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -252,7 +335,7 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <WorkIcon sx={{ color: '#4169E1' }} />
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
@@ -268,11 +351,59 @@ const Resume: React.FC = () => {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: '#4169E1' }} />
+                                <WorkIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body2" fontFamily={'Roboto'}>
                                     Full-time at Banque de France
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="textSecondary" fontFamily={'Roboto'}>
+                                    September 2020
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" fontFamily={'Roboto'}>
+                                    Started at INSA Lyon
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="textSecondary" fontFamily={'Roboto'}>
+                                    2018 - 2020
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" fontFamily={'Roboto'}>
+                                    Intensive preparatory classes PTSI-PT
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="textSecondary" fontFamily={'Roboto'}>
+                                    2018
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" fontFamily={'Roboto'}>
+                                    Graduated from high school with highest honors
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -282,7 +413,9 @@ const Resume: React.FC = () => {
 
                 <Grid size={{ xs: 12, md: 9 }}>
 
-                    <Accordion>
+                    <Typography mt={2} ml={3} mb={3} fontFamily={'Roboto'} variant="h4">Job experiences</Typography>
+
+                    <Accordion defaultExpanded>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                             <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
                                 <Box display="flex" alignItems="center">
@@ -587,6 +720,108 @@ const Resume: React.FC = () => {
                     </Accordion>
                 </Grid>
             </Grid>
+
+            <Divider />
+
+            <Typography fontFamily={'Roboto'} variant="h6">Languages</Typography>
+
+            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Box sx={{ width: '48%' }}>
+                    <Typography fontFamily={'Roboto'} variant="body1">French</Typography>
+                    <StaticBorderLinearProgress value={100} />
+                    <Typography mt={1} fontFamily={'Roboto'} variant="body1">English</Typography>
+                    <StaticBorderLinearProgress value={90} />
+                </Box>
+
+                <Box sx={{ width: '48%' }}>
+                    <Typography fontFamily={'Roboto'} variant="body1">Spanish</Typography>
+                    <StaticBorderLinearProgress value={70} />
+                    <Typography mt={1} fontFamily={'Roboto'} variant="body1">Italian</Typography>
+                    <StaticBorderLinearProgress value={50} />
+                    <Typography mt={1} fontFamily={'Roboto'} variant="body1">Russian</Typography>
+                    <StaticBorderLinearProgress value={40} />
+                </Box>
+            </Box>
+
+            <Divider />
+
+            <Typography fontFamily={'Roboto'} variant="h6">Programming languages and Skills</Typography>
+
+            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Development</Typography>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={90} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Java</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>C</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>C++</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={70} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>TypeScript</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={70} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>React</Typography>
+                    </Box>
+                </Box>
+
+                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Data Processing & Deep Learning</Typography>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={95} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Python</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={90} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Pytorch</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={90} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Pytorch Lightning</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hydra</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hugging Face</Typography>
+                    </Box>
+                </Box>
+
+                <Box sx={{ width: '24%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Frameworks & Execution Environment</Typography>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Maven</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Quarkus</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={70} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hypersistence</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={75} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Node.js</Typography>
+                    </Box>
+                </Box>
+            </Box>
 
         </Container >
     );
