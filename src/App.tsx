@@ -60,7 +60,6 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/Resume" element={<Resume />} />
           <Route path="/Publications" element={<Publications />} />
-          <Route path="/Projects" element={<Outlet />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </HashRouter>
