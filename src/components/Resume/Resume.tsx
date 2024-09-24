@@ -111,13 +111,13 @@ const Resume: React.FC = () => {
         >
             <Grid container spacing={2} columns={12} mb={8}>
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>
+                    <Typography variant="h1" gutterBottom fontFamily={'Roboto'} sx={{ fontWeight: 100 }}>
                         Resume
                     </Typography>
-                    <Typography variant="h4" gutterBottom fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                    <Typography variant="h4" gutterBottom fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400 }}>
                         Master of Science in Computing Sciences
                     </Typography>
-                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", mb: 8 }}>
+                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400, mb: 8 }}>
                         Research Engineer at Conservatoire National des Arts et Métiers, LMSSC - Paris
                     </Typography>
 
@@ -220,7 +220,7 @@ const Resume: React.FC = () => {
                                 opacity: 0.8, // Slightly reduce opacity
                             },
                         }} />
-                    <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                    <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400 }}>
                         Malo Olivier
                     </Typography>
                 </Grid>

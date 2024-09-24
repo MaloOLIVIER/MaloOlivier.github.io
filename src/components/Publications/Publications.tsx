@@ -136,7 +136,7 @@ const Publications: React.FC = () => {
             component="main"
             sx={{ display: 'flex', flexDirection: 'column', my: 20, gap: 4 }}
         >
-            <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>Publications</Typography>
+            <Typography variant="h1" gutterBottom fontFamily={'Roboto'} sx={{ fontWeight: 100 }}>Publications</Typography>
 
             <Grid direction='column' container spacing={8} columns={12} justifyContent="center" alignItems="center">
                 <Grid size={{ xs: 12, md: 8 }}>

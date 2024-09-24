@@ -3,7 +3,6 @@ import { Author, cardData, StyledTypography, SyledCard, SyledCardContent } from 
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid2';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
 const Homepage: React.FC = () => {
@@ -32,10 +31,10 @@ const Homepage: React.FC = () => {
 
             <Grid container spacing={2} columns={12}>
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Typography variant="h1" gutterBottom fontFamily={'Roboto'}>
+                    <Typography variant="h1" gutterBottom fontFamily={'Roboto'} sx={{ fontWeight: 100 }}>
                         Welcome to my publication research blog
                     </Typography>
-                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 100, fontStyle: 'italic' }}>
                         Step into the world of my research. Explore, learn, and engage.
                     </Typography>
                 </Grid>
@@ -48,7 +47,7 @@ const Homepage: React.FC = () => {
                         title="Malo"
                         sx={{ width: '50%', height: 'auto', mb: 2, borderRadius: '45%' }}
                     />
-                    <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#4169E1" }}>
+                    <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400 }}>
                         Malo Olivier
                     </Typography>
                 </Grid>
