@@ -119,42 +119,42 @@ export default function AppAppBar({
                   <IconButton onClick={toggleDrawer(false)}>
                     <CloseRoundedIcon />
                   </IconButton>
+                  <MenuItem>
+                    <ToggleColorMode
+                      data-screenshot="toggle-mode"
+                      mode={mode}
+                      toggleColorMode={toggleColorMode}
+                    />
+                  </MenuItem>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Home
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Resume" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Resume
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Publications" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Publications
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Contact" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Contact
                     </Typography>
                   </Link>
-                </MenuItem>
-                <MenuItem>
-                  <ToggleColorMode
-                    data-screenshot="toggle-mode"
-                    mode={mode}
-                    toggleColorMode={toggleColorMode}
-                  />
                 </MenuItem>
               </Box>
             </Drawer>
