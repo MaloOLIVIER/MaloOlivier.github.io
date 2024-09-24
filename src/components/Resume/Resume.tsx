@@ -107,7 +107,7 @@ const Resume: React.FC = () => {
         <Container
             maxWidth="lg"
             component="main"
-            sx={{ display: 'flex', flexDirection: 'column', my: 20, gap: 4 }}
+            sx={{ display: 'flex', flexDirection: 'column', my: 15, gap: 2 }}
         >
             <Grid container spacing={2} columns={12} mb={8}>
                 <Grid size={{ xs: 12, md: 6 }}>

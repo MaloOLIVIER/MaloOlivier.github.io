@@ -26,7 +26,7 @@ const Homepage: React.FC = () => {
         <Container
             maxWidth="lg"
             component="main"
-            sx={{ display: 'flex', flexDirection: 'column', my: 20, gap: 4 }}
+            sx={{ display: 'flex', flexDirection: 'column', my: 15, gap: 2 }}
         >
 
             <Grid container spacing={2} columns={12}>
