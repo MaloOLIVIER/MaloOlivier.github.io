@@ -58,6 +58,8 @@ export default function AppAppBar({
     setOpen(newOpen);
   };
 
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <AppBar
       sx={{ boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 2, position: { xs: 'absolute', md: 'fixed' } }}
@@ -65,6 +67,9 @@ export default function AppAppBar({
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
+            <Typography sx={{ fontFamily: 'Roboto, sans-serif' }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+              {isHovered ? '🕺' : '👨‍🔬'}
+            </Typography>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Link to="/">
                 <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
