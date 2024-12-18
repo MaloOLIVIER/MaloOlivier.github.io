@@ -14,6 +14,8 @@ import PlaceIcon from '@mui/icons-material/Place';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import SchoolIcon from '@mui/icons-material/School';
 import BiotechIcon from '@mui/icons-material/Biotech';
+import GoogleIcon from '@mui/icons-material/Google';
+import { ReactComponent as ResearchGateIcon } from './researchgate.svg';
 import WorkIcon from '@mui/icons-material/Work';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import CircularProgress, { CircularProgressProps, circularProgressClasses, } from '@mui/material/CircularProgress';
@@ -121,85 +123,177 @@ const Resume: React.FC = () => {
                         Research Engineer at Conservatoire National des Arts et Métiers, LMSSC - Paris
                     </Typography>
 
-                    <Box display="flex" alignItems="center" mb={1}>
-                        <ChildFriendlyIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            28 November 2000
-                        </Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center" mb={1}>
-                        <HomeIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            Île de France
-                        </Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center" mb={1}>
-                        <PhoneIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            +33 6 ** ** ** **
-                        </Typography>
-                    </Box>
-                    <Box
-                        component="a"
-                        href="https://github.com/MaloOLIVIER"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        display="flex"
-                        alignItems="center"
-                        mb={1}
-                        sx={{
-                            textDecoration: 'none',
-                            color: 'inherit',
-                            '&:hover': {
-                                color: '#4169E1',
-                            },
-                        }}
-                    >
-                        <GitHubIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            /MaloOLIVIER
-                        </Typography>
-                    </Box>
-                    <Box
-                        component="a"
-                        href="mailto:MaloOlivier333@gmail.com"
-                        display="flex"
-                        alignItems="center"
-                        mb={1}
-                        sx={{
-                            textDecoration: 'none',
-                            color: 'inherit',
-                            '&:hover': {
-                                color: '#4169E1',
-                            },
-                        }}
-                    >
-                        <EmailIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            ***@***
-                        </Typography>
-                    </Box>
-                    <Box
-                        component="a"
-                        href="https://www.linkedin.com/in/maloolivier"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        display="flex"
-                        alignItems="center"
-                        mb={1}
-                        sx={{
-                            textDecoration: 'none',
-                            color: 'inherit',
-                            '&:hover': {
-                                color: '#4169E1',
-                            },
-                        }}
-                    >
-                        <LinkedInIcon />
-                        <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                            in/maloolivier
-                        </Typography>
-                    </Box>
+                    <Grid container spacing={2} columns={12} mb={0}>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box display="flex" alignItems="center" mb={1}>
+                                <ChildFriendlyIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    28 November 2000
+                                </Typography>
+                            </Box>
+                            <Box display="flex" alignItems="center" mb={1}>
+                                <HomeIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    Île de France
+                                </Typography>
+                            </Box>
+                            <Box display="flex" alignItems="center" mb={1}>
+                                <PhoneIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    +33 6 ** ** ** **
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="https://github.com/MaloOLIVIER"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <GitHubIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    /MaloOLIVIER
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="mailto:MaloOlivier333@gmail.com"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <EmailIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    ***@***
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="https://www.linkedin.com/in/maloolivier"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <LinkedInIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    in/maloolivier
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box
+                                component="a"
+                                href="https://www.linkedin.com/in/maloolivier"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <GoogleIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    scholar-to-update
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="https://www.researchgate.net/profile/Malo-Olivier"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <ResearchGateIcon />
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    /Malo-Olivier
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="https://huggingface.co/MaloOLIVIER"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                🤗
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    /MaloOLIVIER
+                                </Typography>
+                            </Box>
+                            <Box
+                                component="a"
+                                href="https://orcid.org/0009-0000-6534-8962"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                display="flex"
+                                alignItems="center"
+                                mb={1}
+                                sx={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                    '&:hover': {
+                                        color: '#4169E1',
+                                    },
+                                }}
+                            >
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    ORCID
+                                </Typography>
+                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
+                                    0009-0000-6534-8962
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 12 }}>
