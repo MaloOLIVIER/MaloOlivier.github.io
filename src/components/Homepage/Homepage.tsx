@@ -1,9 +1,8 @@
 import React from 'react';
 import { Author, cardData, StyledTypography, SyledCard, SyledCardContent } from '../Publications/Publications';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { CardMedia, Container, Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import Container from '@mui/material/Container';
 
 const Homepage: React.FC = () => {
     const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
@@ -36,6 +35,51 @@ const Homepage: React.FC = () => {
                     </Typography>
                     <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 100, fontStyle: 'italic' }}>
                         Step into the world of my research. Explore, learn, and engage.
+                    </Typography>
+                    <Box
+                        component="a"
+                        href="https://github.com/MaloOLIVIER/hungarian-net"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                        mb={1}
+                        sx={{
+                            textDecoration: 'none',
+                            color: 'inherit',
+                            '&:hover': {
+                                color: '#4169E1',
+                            },
+                        }}
+                    >
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '16px', marginTop: '40px' }}>
+                            <img
+                                src="https://img.shields.io/badge/Latest_on_Github!-blue"
+                            //style={{ marginBottom: '16px', marginTop: '40px' }} // Adds space between the image and text
+                            />
+                            <img
+                                alt="PyTorch"
+                                src="https://img.shields.io/badge/-Pytorch 2.4-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white"
+                                style={{ marginLeft: '4px' }}
+                            />
+                            <img
+                                alt="Lightning"
+                                src="https://img.shields.io/badge/-Lightning 2.4-792ee5?style=for-the-badge&logo=lightning&logoColor=white"
+                                style={{ marginLeft: '4px' }}
+                            />
+                            <img
+                                alt="Config: hydra"
+                                src="https://img.shields.io/badge/-🐙 hydra 1.3-89b8cd?style=for-the-badge&logo=hydra&logoColor=white"
+                                style={{ marginLeft: '4px' }}
+                            />
+                        </div>
+                        <Typography variant="h4" fontFamily={'Roboto'} sx={{ fontWeight: 100 }}>
+                            Come checkout my latest repository! I made a deep-learning implementation of the Hungarian algorithm applied for sound source localization. <GitHubIcon />
+                        </Typography>
+                    </Box>
+                    <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'} sx={{ marginBottom: 2 }}>
+                        Python ; Deep Learning ; Pytorch ; Hydra ; Hungarian Algorithm ; Hungarian Assignment ; Sound Source Localization.
                     </Typography>
                 </Grid>
 
