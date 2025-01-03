@@ -224,7 +224,7 @@ const Resume: React.FC = () => {
                             >
                                 <GoogleIcon />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                                    scholar-to-update
+                                    soon available
                                 </Typography>
                             </Box>
                             <Box
@@ -243,7 +243,7 @@ const Resume: React.FC = () => {
                                     },
                                 }}
                             >
-                                <ResearchGateIcon />
+                                <ResearchGateIcon fill="currentColor" />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
                                     /Malo-Olivier
                                 </Typography>
@@ -285,9 +285,7 @@ const Resume: React.FC = () => {
                                     },
                                 }}
                             >
-                                <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                                    ORCID
-                                </Typography>
+                                <BiotechIcon />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
                                     0009-0000-6534-8962
                                 </Typography>
@@ -338,7 +336,7 @@ const Resume: React.FC = () => {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
-                                    Research Engineer at CNAM, ISL
+                                    AI Research Engineer at CNAM, ISL
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -514,7 +512,7 @@ const Resume: React.FC = () => {
                             <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
                                 <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
-                                        Research Engineer
+                                        AI Research Engineer
                                     </Typography>
                                 </Grid>
                                 <Grid>

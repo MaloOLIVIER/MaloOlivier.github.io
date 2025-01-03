@@ -42,11 +42,21 @@ const Homepage: React.FC = () => {
                 <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 12 }}>
                     <CardMedia
                         component="img"
-                        alt="Malo"
                         image="/static/images/avatar/malo.jpg"
+                        onClick={() => handleClick("/static/images/papers/CVENMaloOLIVIER.pdf")}
                         title="Malo"
-                        sx={{ width: '50%', height: 'auto', mb: 2, borderRadius: '45%' }}
-                    />
+                        sx={{
+                            width: '50%',
+                            height: 'auto',
+                            mb: 2,
+                            borderRadius: '45%',
+                            transition: 'transform 0.3s, opacity 0.3s', // Smooth transition for hover effects
+                            cursor: 'pointer', // Change cursor to pointer
+                            '&:hover': {
+                                transform: 'scale(1.05)', // Slightly enlarge the image
+                                opacity: 0.8, // Slightly reduce opacity
+                            },
+                        }} />
                     <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400 }}>
                         Malo Olivier
                     </Typography>
