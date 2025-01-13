@@ -55,6 +55,7 @@ const Homepage: React.FC = () => {
                     >
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '16px', marginTop: '40px' }}>
                             <img
+                                alt="Latest on Github!"
                                 src="https://img.shields.io/badge/Latest_on_Github!-blue"
                             //style={{ marginBottom: '16px', marginTop: '40px' }} // Adds space between the image and text
                             />
