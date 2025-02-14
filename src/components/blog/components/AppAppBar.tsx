@@ -83,7 +83,7 @@ export default function AppAppBar({
             </Typography>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Link to="/">
-                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif', ml: 1 }}>
                   Home
                 </Button>
               </Link>
