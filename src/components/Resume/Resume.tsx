@@ -167,7 +167,7 @@ const Resume: React.FC = () => {
                             </Box>
                             <Box
                                 component="a"
-                                href="mailto:MaloOlivier333@gmail.com"
+                                href="mailto:Malo.Olivier@lecnam.net"
                                 display="flex"
                                 alignItems="center"
                                 mb={1}
@@ -181,7 +181,7 @@ const Resume: React.FC = () => {
                             >
                                 <EmailIcon />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                                    Malo.OLIVIER@lecnam.net
+                                    Malo.Olivier@lecnam.net
                                 </Typography>
                             </Box>
                             <Box
