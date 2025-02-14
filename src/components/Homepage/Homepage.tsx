@@ -53,10 +53,10 @@ const Homepage: React.FC = () => {
                             },
                         }}
                     >
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '16px', marginTop: '40px' }}>
+                        <Grid size={{ xs: 12, md: 12 }}>
                             <img
                                 alt="Latest on Github!"
-                                src="https://img.shields.io/badge/Latest_on_Github!-blue"
+                                src="https://img.shields.io/badge/Latest_on_Github!-blue?style=for-the-badge"
                             //style={{ marginBottom: '16px', marginTop: '40px' }} // Adds space between the image and text
                             />
                             <img
@@ -74,7 +74,7 @@ const Homepage: React.FC = () => {
                                 src="https://img.shields.io/badge/-🐙 hydra 1.3-89b8cd?style=for-the-badge&logo=hydra&logoColor=white"
                                 style={{ marginLeft: '4px' }}
                             />
-                        </div>
+                        </Grid>
                         <Typography variant="h4" fontFamily={'Roboto'} sx={{ fontWeight: 100 }}>
                             Come checkout my latest repository! I made a deep-learning implementation of the Hungarian algorithm applied for sound source localization. <GitHubIcon />
                         </Typography>
