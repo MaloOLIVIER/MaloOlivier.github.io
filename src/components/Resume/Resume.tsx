@@ -835,15 +835,15 @@ const Resume: React.FC = () => {
                     <Typography fontFamily={'Roboto'} variant="body1">French</Typography>
                     <StaticBorderLinearProgress value={100} />
                     <Typography mt={1} fontFamily={'Roboto'} variant="body1">English</Typography>
-                    <StaticBorderLinearProgress value={90} />
+                    <StaticBorderLinearProgress value={95} />
                 </Grid>
                 <Grid size={{ xs: 6, md: 6 }}>
-                    <Typography fontFamily={'Roboto'} variant="body1">Spanish</Typography>
+                    <Typography fontFamily={'Roboto'} variant="body1">Italian</Typography>
                     <StaticBorderLinearProgress value={70} />
-                    <Typography mt={1} fontFamily={'Roboto'} variant="body1">Italian</Typography>
+                    <Typography mt={1} fontFamily={'Roboto'} variant="body1">Spanish</Typography>
                     <StaticBorderLinearProgress value={50} />
                     <Typography mt={1} fontFamily={'Roboto'} variant="body1">Russian</Typography>
-                    <StaticBorderLinearProgress value={40} />
+                    <StaticBorderLinearProgress value={35} />
                 </Grid>
             </Grid >
 
