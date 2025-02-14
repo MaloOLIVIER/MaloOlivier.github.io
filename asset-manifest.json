@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.d993114b.css",
-    "main.js": "/static/js/main.3e0f38e5.js",
+    "main.js": "/static/js/main.4af6463a.js",
     "static/js/453.8c8dee85.chunk.js": "/static/js/453.8c8dee85.chunk.js",
+    "static/media/hf.svg": "/static/media/hf.e32d384937b4327150e6857614dae281.svg",
     "static/media/roboto-latin-700-normal.woff2": "/static/media/roboto-latin-700-normal.4535474e1cf8598695ad.woff2",
     "static/media/roboto-latin-500-normal.woff2": "/static/media/roboto-latin-500-normal.7077203b1982951ecf76.woff2",
     "static/media/roboto-latin-100-normal.woff2": "/static/media/roboto-latin-100-normal.d268f5774bc641309cd8.woff2",
@@ -73,14 +74,14 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.4abdc9fff4507f17d726.woff",
     "static/media/roboto-greek-ext-300-normal.woff": "/static/media/roboto-greek-ext-300-normal.b590dbe5c639944366d1.woff",
     "static/media/roboto-greek-ext-400-normal.woff": "/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
-    "static/media/researchgate.svg": "/static/media/researchgate.0a4d7960cc94019a8819abab8db6d3dd.svg",
+    "static/media/researchgate.svg": "/static/media/researchgate.163931f6a02478eb67013a5a955733b4.svg",
     "index.html": "/index.html",
     "main.d993114b.css.map": "/static/css/main.d993114b.css.map",
-    "main.3e0f38e5.js.map": "/static/js/main.3e0f38e5.js.map",
+    "main.4af6463a.js.map": "/static/js/main.4af6463a.js.map",
     "453.8c8dee85.chunk.js.map": "/static/js/453.8c8dee85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d993114b.css",
-    "static/js/main.3e0f38e5.js"
+    "static/js/main.4af6463a.js"
   ]
 }
