@@ -16,6 +16,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import GoogleIcon from '@mui/icons-material/Google';
 import { ReactComponent as ResearchGateIcon } from './researchgate.svg';
+import { ReactComponent as HuggingFaceIcon } from './hf.svg';
 import WorkIcon from '@mui/icons-material/Work';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import CircularProgress, { CircularProgressProps, circularProgressClasses, } from '@mui/material/CircularProgress';
@@ -180,7 +181,7 @@ const Resume: React.FC = () => {
                             >
                                 <EmailIcon />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                                    ***@***
+                                    Malo.OLIVIER@lecnam.net
                                 </Typography>
                             </Box>
                             <Box
@@ -208,7 +209,7 @@ const Resume: React.FC = () => {
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
                                 component="a"
-                                href="https://www.linkedin.com/in/maloolivier"
+                                href="https://scholar.google.fr/citations?hl=fr&user=BH9n_XEAAAAJ"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 display="flex"
@@ -224,7 +225,7 @@ const Resume: React.FC = () => {
                             >
                                 <GoogleIcon />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
-                                    soon available
+                                    Malo Olivier
                                 </Typography>
                             </Box>
                             <Box
@@ -241,6 +242,7 @@ const Resume: React.FC = () => {
                                     '&:hover': {
                                         color: '#4169E1',
                                     },
+                                    '--rg-text': localStorage.getItem('themeMode') === 'dark' ? 'black' : 'white',      
                                 }}
                             >
                                 <ResearchGateIcon fill="currentColor" />
@@ -264,7 +266,7 @@ const Resume: React.FC = () => {
                                     },
                                 }}
                             >
-                                🤗
+                                <HuggingFaceIcon fill="currentColor" />
                                 <Typography variant="body1" fontFamily={'Roboto'} ml={1}>
                                     /MaloOLIVIER
                                 </Typography>
